@@ -85,12 +85,12 @@ const child21 = graph.addNode({
   y: 200,
   width: 80,
   height: 40,
-  label: 'AdSpend\nblending',
+  label: 'Blended \nAdSpend',
   zIndex: 2,
   attrs: {
     body: {
       stroke: 'none',
-      fill: '#3199FF',
+      fill: '#47C769',
     },
     label: {
       fill: '#fff',
