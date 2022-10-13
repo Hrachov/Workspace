@@ -1,0 +1,134 @@
+import { Graph } from '@antv/x6'
+const graph = new Graph({
+  container: document.getElementById('container'),
+  grid: true,
+  translating: {
+    restrict(view) {
+      const cell = view.cell
+      if (cell.isNode()) {
+        const parent = cell.getParent()
+        if (parent1) {
+          return parent.getBBox()
+        }
+      }
+
+      return null
+    },
+  },
+})
+
+
+const child11 = graph.addNode({
+  x: 120,
+  y: 150,
+  width: 80,
+  height: 40,
+  label: 'FB',
+  zIndex: 2,
+  attrs: {
+    body: {
+      stroke: 'none',
+      fill: '#3199FF',
+    },
+    label: {
+      fill: '#fff',
+      fontSize: 12,
+    },
+  },
+})
+
+const child12 = graph.addNode({
+  x: 120,
+  y: 260,
+  width: 80,
+  height: 40,
+  label: 'TikTok',
+  zIndex: 2,
+  attrs: {
+    body: {
+      stroke: 'none',
+      fill: '#3199FF',
+    },
+    label: {
+      fill: '#fff',
+      fontSize: 12,
+    },
+  },
+})
+
+
+const parent1 = graph.addNode({
+  x: 40,
+  y: 40,
+  width: 240,
+  height: 300,
+  zIndex: 1,
+  label: 'Collect raw data',
+  attrs: {
+    label: {
+      refY: 20,
+      fontSize: 12,
+    },
+    body: {
+      fill: '#fffbe6',
+      stroke: '#ffe7ba',
+    },
+  },
+})
+
+parent1.addChild(child11)
+parent1.addChild(child12)
+
+
+const child21 = graph.addNode({
+  x: 360,
+  y: 200,
+  width: 80,
+  height: 40,
+  label: 'AdSpend\nblending',
+  zIndex: 2,
+  attrs: {
+    body: {
+      stroke: 'none',
+      fill: '#3199FF',
+    },
+    label: {
+      fill: '#fff',
+      fontSize: 12,
+    },
+  },
+})
+
+
+const parent2 = graph.addNode({
+  x: 280,
+  y: 40,
+  width: 240,
+  height: 300,
+  zIndex: 1,
+  label: 'Transformation',
+  attrs: {
+    label: {
+      refY: 20,
+      fontSize: 12,
+    },
+    body: {
+      fill: '#fffbe6',
+      stroke: '#ffe7ba',
+    },
+  },
+})
+
+parent1.addChild(child11)
+parent1.addChild(child12)
+parent2.addChild(child21)
+
+graph.addEdge({
+  source: child12, 
+  target: child21, 
+})
+
+graph.addEdge({
+  source: child11, 
+  target: child21, 
+})
