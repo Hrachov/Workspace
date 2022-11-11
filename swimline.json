@@ -1,0 +1,101 @@
+[
+  {
+    "id": "behavior",
+    "shape": "area",
+    "width": 600,
+    "height": 300,
+    "position": {
+      "x": 10,
+      "y": 10
+    },
+    "label": "Behavior",
+
+    "attrs": {
+      "body": {
+        "fill": "#FFF",
+        "stroke": "#5F95FF",
+        "strokeWidth": "0.5"
+      },
+      "name-rect": {
+        "width": "598",
+        "height": "30",
+        "strokeWidth": "0",
+        "x": "+1",
+        "y": "+1"
+      },
+      "name-text": {
+        "ref": "name-rect",
+        "refY": "0.5",
+        "refX": "0.5",
+        "textAnchor": "middle",
+        "fontSize": "12"
+      }
+    }
+  },
+
+  {
+    "id": "cost",
+    "shape": "area",
+    "width": 600,
+    "height": 300,
+    "position": {
+      "x": 10,
+      "y": 310
+    },
+    "label": "Marketing cost",
+
+    "attrs": {
+      "body": {
+        "fill": "#FFF",
+        "stroke": "#5F95FF",
+        "strokeWidth": "0.5"
+      },
+      "name-rect": {
+        "width": "598",
+        "height": "30",
+        "strokeWidth": "0",
+        "x": "+1",
+        "y": "+1"
+      },
+      "name-text": {
+        "ref": "name-rect",
+        "refY": "0.5",
+        "refX": "0.5",
+        "textAnchor": "middle",
+        "fontSize": "12"
+      }
+    }
+  },
+
+  {
+    "id": "firebase_source",
+    "shape": "image",
+    "x": 30,
+    "y": 60,
+    "width": 48,
+    "height": 48,
+    "imageUrl": "https://www.svgrepo.com/show/303670/firebase-1-logo.svg",
+    "parent": "behavior"
+  },
+
+  {
+    "id": "ga4_source",
+    "shape": "image",
+    "x": 30,
+    "y": 160,
+    "width": 48,
+    "height": 48,
+    "imageUrl": "https://www.svgrepo.com/show/353804/google-analytics.svg",
+    "parent": "behavior"
+  },
+  {
+    "id": "criteo_source",
+    "shape": "image",
+    "x": 30,
+    "y": 360,
+    "width": 48,
+    "height": 48,
+    "imageUrl": "https://www.svgrepo.com/show/331520/opensrs.svg",
+    "parent": "cost"
+  }
+]
