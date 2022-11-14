@@ -2,14 +2,13 @@
   {
     "id": "behavior",
     "shape": "area",
-    "width": 600,
+    "width": 420,
     "height": 300,
     "position": {
       "x": 10,
       "y": 10
     },
     "label": "Behavior",
-
     "attrs": {
       "body": {
         "fill": "#FFF",
@@ -17,7 +16,7 @@
         "strokeWidth": "0.5"
       },
       "name-rect": {
-        "width": "598",
+        "width": "418",
         "height": "30",
         "strokeWidth": "0",
         "x": "+1",
@@ -36,14 +35,13 @@
   {
     "id": "cost",
     "shape": "area",
-    "width": 600,
-    "height": 300,
+    "width": 420,
+    "height": 680,
     "position": {
       "x": 10,
       "y": 310
     },
     "label": "Marketing cost",
-
     "attrs": {
       "body": {
         "fill": "#FFF",
@@ -51,7 +49,7 @@
         "strokeWidth": "0.5"
       },
       "name-rect": {
-        "width": "598",
+        "width": "418",
         "height": "30",
         "strokeWidth": "0",
         "x": "+1",
@@ -68,34 +66,598 @@
   },
 
   {
-    "id": "firebase_source",
+    "id": "sale",
+    "shape": "area",
+    "width": 420,
+    "height": 200,
+    "position": {
+      "x": 10,
+      "y": 980
+    },
+    "label": "Sale",
+    "attrs": {
+      "body": {
+        "fill": "#FFF",
+        "stroke": "#5F95FF",
+        "strokeWidth": "0.5"
+      },
+      "name-rect": {
+        "width": "418",
+        "height": "30",
+        "strokeWidth": "0",
+        "x": "+1",
+        "y": "+1"
+      },
+      "name-text": {
+        "ref": "name-rect",
+        "refY": "0.5",
+        "refX": "0.5",
+        "textAnchor": "middle",
+        "fontSize": "12"
+      }
+    }
+  },
+
+  {
+    "id": "transformation",
+    "shape": "area",
+    "width": 1200,
+    "height": 1170,
+    "position": {
+      "x": 430,
+      "y": 10
+    },
+    "label": "Transformation",
+    "attrs": {
+      "body": {
+        "fill": "#FFF",
+        "stroke": "#5F95FF",
+        "strokeWidth": "0.5"
+      },
+      "name-rect": {
+        "width": "798",
+        "height": "30",
+        "strokeWidth": "0",
+        "x": "+1",
+        "y": "+1"
+      },
+      "name-text": {
+        "ref": "name-rect",
+        "refY": "0.5",
+        "refX": "0.5",
+        "textAnchor": "middle",
+        "fontSize": "12"
+      }
+    }
+  },
+
+  {
+    "id": "firebase_behavior_source",
     "shape": "image",
     "x": 30,
     "y": 60,
-    "width": 48,
-    "height": 48,
+    "width": 60,
+    "height": 60,
     "imageUrl": "https://www.svgrepo.com/show/303670/firebase-1-logo.svg",
     "parent": "behavior"
   },
 
   {
-    "id": "ga4_source",
+    "id": "firebase_behavior_process",
+    "shape": "outer_process",
+    "x": 140,
+    "y": 60,
+    "width": 100,
+    "height": 60,
+    "label": "Upload\nfrom Firebase",
+    "parent": "behavior"
+  },
+
+  {
+    "id": "firebase_behavior_data",
+    "shape": "outer_data",
+    "x": 300,
+    "y": 60,
+    "width": 100,
+    "height": 60,
+    "label": "Firebase\nbehavior\ndata",
+    "parent": "behavior"
+  },
+
+  {
+    "id": "ga4_behavior_source",
     "shape": "image",
     "x": 30,
     "y": 160,
-    "width": 48,
-    "height": 48,
+    "width": 60,
+    "height": 60,
     "imageUrl": "https://www.svgrepo.com/show/353804/google-analytics.svg",
     "parent": "behavior"
   },
+
   {
-    "id": "criteo_source",
+    "id": "ga4_behavior_process",
+    "shape": "inner_process",
+    "x": 140,
+    "y": 160,
+    "width": 100,
+    "height": 60,
+    "label": "Upload\nfrom GA4",
+    "parent": "behavior"
+  },
+
+  {
+    "id": "ga4_behavior_data",
+    "shape": "inner_data",
+    "x": 300,
+    "y": 160,
+    "width": 100,
+    "height": 60,
+    "label": "GA4\nbehavior\ndata",
+    "parent": "behavior"
+  },
+
+  {
+    "id": "criteo_cost_source",
     "shape": "image",
     "x": 30,
     "y": 360,
-    "width": 48,
-    "height": 48,
+    "width": 60,
+    "height": 60,
     "imageUrl": "https://www.svgrepo.com/show/331520/opensrs.svg",
     "parent": "cost"
+  },
+
+  {
+    "id": "criteo_cost_process",
+    "shape": "inner_process",
+    "x": 140,
+    "y": 360,
+    "width": 100,
+    "height": 60,
+    "label": "Upload\nfrom Criteo",
+    "parent": "cost"
+  },
+
+  {
+    "id": "criteo_cost_data",
+    "shape": "inner_data",
+    "x": 300,
+    "y": 360,
+    "width": 100,
+    "height": 60,
+    "label": "Criteo cost",
+    "parent": "cost"
+  },
+
+  {
+    "id": "facebook_cost_source",
+    "shape": "image",
+    "x": 30,
+    "y": 460,
+    "width": 60,
+    "height": 60,
+    "imageUrl": "https://cdn.iconscout.com/icon/free/png-256/facebook-logo-2019-1597680-1350125.png",
+    "parent": "cost"
+  },
+
+  {
+    "id": "instagram_cost_source",
+    "shape": "image",
+    "x": 30,
+    "y": 560,
+    "width": 60,
+    "height": 60,
+    "imageUrl": "https://cdn.iconscout.com/icon/free/png-256/instagram-52-151106.png",
+    "parent": "cost"
+  },
+
+  {
+    "id": "facebook_cost_process",
+    "shape": "inner_process",
+    "x": 140,
+    "y": 510,
+    "width": 100,
+    "height": 60,
+    "label": "Upload\nfrom Facebook",
+    "parent": "cost"
+  },
+
+  {
+    "id": "facebook_cost_data",
+    "shape": "inner_data",
+    "x": 300,
+    "y": 510,
+    "width": 100,
+    "height": 60,
+    "label": "Facebook\ncost data",
+    "parent": "cost"
+  },
+
+  {
+    "id": "gad_cost_source",
+    "shape": "image",
+    "x": 30,
+    "y": 660,
+    "width": 60,
+    "height": 60,
+    "imageUrl": "https://www.vectorlogo.zone/logos/google_ads/google_ads-icon.svg",
+    "parent": "cost"
+  },
+
+  {
+    "id": "gad_cost_process",
+    "shape": "inner_process",
+    "x": 140,
+    "y": 660,
+    "width": 100,
+    "height": 60,
+    "label": "Upload\nfrom\nGoogleAd",
+    "parent": "cost"
+  },
+
+  {
+    "id": "gad_cost_data",
+    "shape": "inner_data",
+    "x": 300,
+    "y": 660,
+    "width": 100,
+    "height": 60,
+    "label": "GoogleAd\ncost data",
+    "parent": "cost"
+  },
+
+  {
+    "id": "ext_cost_source",
+    "shape": "image",
+    "x": 30,
+    "y": 760,
+    "width": 60,
+    "height": 60,
+    "imageUrl": "https://www.svgrepo.com/show/12704/international.svg",
+    "parent": "cost"
+  },
+
+  {
+    "id": "ext_cost_process",
+    "shape": "outer_process",
+    "x": 140,
+    "y": 760,
+    "width": 100,
+    "height": 60,
+    "label": "Upload\nRTB-House",
+    "parent": "cost"
+  },
+
+  {
+    "id": "ext_cost_data",
+    "shape": "outer_data",
+    "x": 300,
+    "y": 760,
+    "width": 100,
+    "height": 60,
+    "label": "RTB-House\ncost data",
+    "parent": "cost"
+  },
+
+  {
+    "id": "ext2_cost_data",
+    "shape": "outer_data",
+    "x": 300,
+    "y": 860,
+    "width": 100,
+    "height": 60,
+    "label": "Channel rules",
+    "parent": "cost"
+  },
+
+  {
+    "id": "ext_sale_source",
+    "shape": "image",
+    "x": 30,
+    "y": 1040,
+    "width": 60,
+    "height": 60,
+    "imageUrl": "https://www.svgrepo.com/show/12704/international.svg",
+    "parent": "sale"
+  },
+
+  {
+    "id": "ext_sale_process",
+    "shape": "outer_process",
+    "x": 140,
+    "y": 1040,
+    "width": 100,
+    "height": 60,
+    "label": "Upload\nfrom CRM",
+    "parent": "sale"
+  },
+
+  {
+    "id": "ext_sale_data",
+    "shape": "outer_data",
+    "x": 300,
+    "y": 1040,
+    "width": 100,
+    "height": 60,
+    "label": "Sale\ndata",
+    "parent": "sale"
+  },
+
+  {
+    "id": "hybridsession_transformation_process",
+    "shape": "inner_process",
+    "x": 480,
+    "y": 60,
+    "width": 100,
+    "height": 60,
+    "label": "Hybrid sssions",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "hybridsession_transformation_data",
+    "shape": "inner_data",
+    "x": 640,
+    "y": 60,
+    "width": 100,
+    "height": 60,
+    "label": "Hybrid\nsession\ndata",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "session_transformation_process",
+    "shape": "inner_process",
+    "x": 480,
+    "y": 160,
+    "width": 100,
+    "height": 60,
+    "label": "Sessions",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "session_transformation_data",
+    "shape": "inner_data",
+    "x": 640,
+    "y": 160,
+    "width": 100,
+    "height": 60,
+    "label": "Session\ndata",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "blendadspent_tranformation_process",
+    "shape": "inner_process",
+    "x": 480,
+    "y": 510,
+    "width": 100,
+    "height": 60,
+    "label": "Blend AdSpend",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "blendadspent_tranformation_data",
+    "shape": "inner_data",
+    "x": 640,
+    "y": 510,
+    "width": 100,
+    "height": 60,
+    "label": "Blended AdSpent\ndata",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "attributioncost_transformation_process",
+    "shape": "inner_process",
+    "x": 800,
+    "y": 360,
+    "width": 100,
+    "height": 60,
+    "label": "Cost attribution",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "attributioncost_transformation_data",
+    "shape": "inner_data",
+    "x": 960,
+    "y": 360,
+    "width": 100,
+    "height": 60,
+    "label": "Attribited\ncost data",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "edge1",
+    "shape": "lane-edge",
+    "source": "firebase_behavior_source",
+    "target": "firebase_behavior_process"
+  },
+
+  {
+    "id": "edge2",
+    "shape": "lane-edge",
+    "source": "firebase_behavior_process",
+    "target": "firebase_behavior_data"
+  },
+
+  {
+    "id": "edge3",
+    "shape": "lane-edge",
+    "source": "ga4_behavior_source",
+    "target": "ga4_behavior_process"
+  },
+
+  {
+    "id": "edge4",
+    "shape": "lane-edge",
+    "source": "ga4_behavior_process",
+    "target": "ga4_behavior_data"
+  },
+
+  {
+    "id": "edge5",
+    "shape": "lane-edge",
+    "source": "criteo_cost_source",
+    "target": "criteo_cost_process"
+  },
+
+  {
+    "id": "edge6",
+    "shape": "lane-edge",
+    "source": "criteo_cost_process",
+    "target": "criteo_cost_data"
+  },
+
+  {
+    "id": "edge7",
+    "shape": "lane-edge",
+    "source": "ext_sale_source",
+    "target": "ext_sale_process"
+  },
+
+  {
+    "id": "edge8",
+    "shape": "lane-edge",
+    "source": "ext_sale_process",
+    "target": "ext_sale_data"
+  },
+
+  {
+    "id": "edge9",
+    "shape": "lane-edge",
+    "source": "facebook_cost_source",
+    "target": "facebook_cost_process"
+  },
+
+  {
+    "id": "edge10",
+    "shape": "lane-edge",
+    "source": "facebook_cost_process",
+    "target": "facebook_cost_data"
+  },
+
+  {
+    "id": "edge11",
+    "shape": "lane-edge",
+    "source": "instagram_cost_source",
+    "target": "facebook_cost_process"
+  },
+
+  {
+    "id": "edge12",
+    "shape": "lane-edge",
+    "source": "gad_cost_source",
+    "target": "gad_cost_process"
+  },
+
+  {
+    "id": "edge13",
+    "shape": "lane-edge",
+    "source": "gad_cost_process",
+    "target": "gad_cost_data"
+  },
+
+  {
+    "id": "edge14",
+    "shape": "lane-edge",
+    "source": "ext_cost_source",
+    "target": "ext_cost_process"
+  },
+
+  {
+    "id": "edge15",
+    "shape": "lane-edge",
+    "source": "ext_cost_process",
+    "target": "ext_cost_data"
+  },
+
+  {
+    "id": "edge16",
+    "shape": "lane-edge",
+    "source": "firebase_behavior_data",
+    "target": "hybridsession_transformation_process"
+  },
+
+  {
+    "id": "edge17",
+    "shape": "lane-edge",
+    "source": "hybridsession_transformation_process",
+    "target": "hybridsession_transformation_data"
+  },
+
+  {
+    "id": "edge18",
+    "shape": "lane-edge",
+    "source": "ga4_behavior_data",
+    "target": "session_transformation_process"
+  },
+
+  {
+    "id": "edge19",
+    "shape": "lane-edge",
+    "source": "session_transformation_process",
+    "target": "session_transformation_data"
+  },
+
+  {
+    "id": "edge20",
+    "shape": "lane-edge",
+    "source": "criteo_cost_data",
+    "target": "blendadspent_tranformation_process"
+  },
+
+  {
+    "id": "edge21",
+    "shape": "lane-edge",
+    "source": "facebook_cost_data",
+    "target": "blendadspent_tranformation_process"
+  },
+
+  {
+    "id": "edge22",
+    "shape": "lane-edge",
+    "source": "gad_cost_data",
+    "target": "blendadspent_tranformation_process"
+  },
+
+  {
+    "id": "edge23",
+    "shape": "lane-edge",
+    "source": "blendadspent_tranformation_process",
+    "target": "blendadspent_tranformation_data"
+  },
+
+  {
+    "id": "edge24",
+    "shape": "lane-edge",
+    "source": "blendadspent_tranformation_data",
+    "target": "attributioncost_transformation_process"
+  },
+
+  {
+    "id": "edge25",
+    "shape": "lane-edge",
+    "source": "session_transformation_data",
+    "target": "attributioncost_transformation_process"
+  },
+
+  {
+    "id": "edge26",
+    "shape": "lane-edge",
+    "source": "attributioncost_transformation_process",
+    "target": "attributioncost_transformation_data"
+  },
+
+  {
+    "id": "edge27",
+    "shape": "lane-edge",
+    "source": "ext_cost_data",
+    "target": "blendadspent_tranformation_process"
   }
 ]
