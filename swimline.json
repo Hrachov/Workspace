@@ -101,7 +101,7 @@
   {
     "id": "transformation",
     "shape": "area",
-    "width": 1200,
+    "width": 1150,
     "height": 1170,
     "position": {
       "x": 430,
@@ -115,7 +115,7 @@
         "strokeWidth": "0.5"
       },
       "name-rect": {
-        "width": "798",
+        "width": "1148",
         "height": "30",
         "strokeWidth": "0",
         "x": "+1",
@@ -468,7 +468,84 @@
     "y": 360,
     "width": 100,
     "height": 60,
-    "label": "Attribited\ncost data",
+    "label": "Sessions\nwith cost",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "addchannel_transformation_process",
+    "shape": "inner_process",
+    "x": 960,
+    "y": 480,
+    "width": 100,
+    "height": 60,
+    "label": "Add channels",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "addchannel_transformation_data",
+    "shape": "inner_data",
+    "x": 1120,
+    "y": 480,
+    "width": 100,
+    "height": 60,
+    "label": "Sessions\nwith channels",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "addsale_transformation_process",
+    "shape": "inner_process",
+    "x": 1120,
+    "y": 600,
+    "width": 100,
+    "height": 60,
+    "label": "Add sale",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "addsale_transformation_data",
+    "shape": "inner_data",
+    "x": 1280,
+    "y": 600,
+    "width": 100,
+    "height": 60,
+    "label": "Sessions\nwith sale",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "fba_transformation_process",
+    "shape": "inner_process",
+    "x": 1280,
+    "y": 720,
+    "width": 100,
+    "height": 60,
+    "label": "Funnel based\nattribution",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "fba_transformation_data",
+    "shape": "inner_data",
+    "x": 1440,
+    "y": 720,
+    "width": 100,
+    "height": 60,
+    "label": "Funnel based\nattribution data",
+    "parent": "transformation"
+  },
+
+  {
+    "id": "preparedatamart_transformation_process",
+    "shape": "inner_process",
+    "x": 1440,
+    "y": 600,
+    "width": 100,
+    "height": 60,
+    "label": "Prepare\ndatamarts",
     "parent": "transformation"
   },
 
@@ -659,5 +736,75 @@
     "shape": "lane-edge",
     "source": "ext_cost_data",
     "target": "blendadspent_tranformation_process"
+  },
+
+  {
+    "id": "edge28",
+    "shape": "lane-edge",
+    "source": "ext2_cost_data",
+    "target": "addchannel_transformation_process"
+  },
+
+  {
+    "id": "edge29",
+    "shape": "lane-edge",
+    "source": "attributioncost_transformation_data",
+    "target": "addchannel_transformation_process"
+  },
+
+  {
+    "id": "edge30",
+    "shape": "lane-edge",
+    "source": "addchannel_transformation_process",
+    "target": "addchannel_transformation_data"
+  },
+
+  {
+    "id": "edge31",
+    "shape": "lane-edge",
+    "source": "addchannel_transformation_data",
+    "target": "addsale_transformation_process"
+  },
+
+  {
+    "id": "edge32",
+    "shape": "lane-edge",
+    "source": "addsale_transformation_process",
+    "target": "addsale_transformation_data"
+  },
+
+  {
+    "id": "edge33",
+    "shape": "lane-edge",
+    "source": "addsale_transformation_data",
+    "target": "fba_transformation_process"
+  },
+
+  {
+    "id": "edge34",
+    "shape": "lane-edge",
+    "source": "fba_transformation_process",
+    "target": "fba_transformation_data"
+  },
+
+  {
+    "id": "edge35",
+    "shape": "lane-edge",
+    "source": "ext_sale_data",
+    "target": "addsale_transformation_process"
+  },
+
+  {
+    "id": "edge36",
+    "shape": "lane-edge",
+    "source": "addsale_transformation_data",
+    "target": "preparedatamart_transformation_process"
+  },
+
+  {
+    "id": "edge37",
+    "shape": "lane-edge",
+    "source": "fba_transformation_data",
+    "target": "preparedatamart_transformation_process"
   }
 ]
