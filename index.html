@@ -1,0 +1,198 @@
+<html>
+  <script src="https://unpkg.com/@antv/x6/dist/x6.js"></script>
+  <script>
+    X6.Graph.registerNode(
+      'area',
+      {
+        inherit: 'rect',
+        markup: [
+          {
+            tagName: 'rect',
+            selector: 'body',
+          },
+          {
+            tagName: 'rect',
+            selector: 'name-rect',
+          },
+          {
+            tagName: 'text',
+            selector: 'name-text',
+          },
+          {
+            tagName: 'image',
+            selector: 'image',
+          },
+        ],
+      },
+      true
+    );
+
+    X6.Graph.registerNode(
+      'outer_process',
+      {
+        inherit: 'rect',
+        width: 100,
+        height: 60,
+        attrs: {
+          body: {
+            strokeWidth: 1,
+            stroke: '#ff8000',
+            fill: '#ffff00',
+          },
+          text: {
+            fontSize: 12,
+            fill: '#262626',
+          },
+        },
+      },
+      true
+    );
+
+    X6.Graph.registerNode(
+      'inner_process',
+      {
+        inherit: 'rect',
+        width: 100,
+        height: 60,
+        attrs: {
+          body: {
+            strokeWidth: 1,
+            stroke: '#0040ff',
+            fill: '#EFF4FF',
+          },
+          text: {
+            fontSize: 12,
+            fill: '#262626',
+          },
+        },
+      },
+      true
+    );
+
+    X6.Graph.registerNode(
+      'outer_data',
+      {
+        inherit: 'rect',
+        width: 100,
+        height: 60,
+        attrs: {
+          body: {
+            strokeWidth: 1,
+            stroke: '#ff8000',
+            fill: '#ffff00',
+            rx: 20,
+            ry: 20
+          },
+          text: {
+            fontSize: 12,
+            fill: '#262626',
+          },
+        },
+      },
+      true
+    );
+
+    X6.Graph.registerNode(
+      'inner_data',
+      {
+        inherit: 'rect',
+        width: 100,
+        height: 60,
+        attrs: {
+          body: {
+            strokeWidth: 1,
+            stroke: '#0040ff',
+            fill: '#EFF4FF',
+            rx: 20,
+            ry: 20
+          },
+          text: {
+            fontSize: 12,
+            fill: '#262626',
+          },
+        },
+      },
+      true
+    );
+
+
+    X6.Graph.registerEdge(
+      'lane-edge',
+      {
+        inherit: 'edge',
+        connector: {
+          name: 'rounded',
+          args: { radius: '50' }
+        },
+        attrs: {
+          line: {
+            stroke: '#1890ff',
+            strokeWidth: 1,
+          },
+        },
+      },
+      true
+    );
+
+    const graph = new X6.Graph({
+      container: document.getElementById('container'),
+      width: 1600,
+      height: 1200,
+      connecting: {
+        router: 'orth',
+      },
+      translating: {
+        restrict(cellView) {
+          const cell = cellView.cell;
+          const parentId = cell.prop('parent');
+          if (parentId) {
+            const parentNode = graph.getCellById(parentId);
+            if (parentNode) {
+              return parentNode.getBBox().moveAndExpand({
+                x: 0,
+                y: 30,
+                width: 0,
+                height: -30,
+              });
+            }
+          }
+          return cell.getBBox();
+        },
+      },
+    });
+
+    fetch('swimlane.json')
+      .then((response) => response.json())
+      .then((data) => {
+        const cells = [];
+        data.forEach((item) => {
+          if (item.shape === 'lane-edge') {
+            cells.push(graph.createEdge(item));
+          } else {
+            cells.push(graph.createNode(item));
+          }
+        });
+
+        graph.resetCells(cells);
+        graph.zoomToFit({ padding: 10, maxScale: 1 });
+      });
+
+    graph.on('cell:dblclick', ({ cell, e }) => {
+      const isNode = cell.isNode();
+      const name = cell.isNode() ? 'node-editor' : 'edge-editor';
+      cell.removeTool(name);
+      cell.addTools({
+        name,
+        args: {
+          event: e,
+          attrs: {
+            backgroundColor: isNode ? '#EFF4FF' : '#FFF',
+          },
+        },
+      });
+    });
+  </script>
+  <body>
+    <div id="container"></div>
+  </body>
+</html>
