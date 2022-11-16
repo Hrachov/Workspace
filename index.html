@@ -18,10 +18,6 @@
             tagName: 'text',
             selector: 'name-text',
           },
-          {
-            tagName: 'image',
-            selector: 'image',
-          },
         ],
       },
       true
@@ -31,6 +27,28 @@
       'outer_process',
       {
         inherit: 'rect',
+        markup: [
+          {
+            tagName: 'rect',
+            selector: 'body',
+          },
+          {
+            tagName: 'rect',
+            selector: 'name-rect',
+          },
+          {
+            tagName: 'text',
+            selector: 'name-text',
+          },
+          {
+            tagName: 'image',
+            selector: 'image',
+          },
+          {
+            tagName: 'rect',
+            selector: 'tagbutton',
+          },
+        ],
         width: 100,
         height: 60,
         attrs: {
@@ -43,6 +61,28 @@
             fontSize: 12,
             fill: '#262626',
           },
+          image: {
+            width: 16,
+            height: 16,
+            x: 2,
+            y: 2,
+            xlinkHref:
+              'https://cdn-icons-png.flaticon.com/512/7267/7267592.png',
+            opacity: 0.4,
+          },
+          tagbutton: {
+            x:2,
+            y:43,
+            width: 40,
+            height: 15,
+            rx: 6,
+            ry: 6,
+            'stroke-width': 0.5,
+            cursor: 'pointer',
+            fill: 'white',
+            stroke: '#fe854f',
+          },
+          
         },
       },
       true
@@ -52,6 +92,32 @@
       'inner_process',
       {
         inherit: 'rect',
+        markup: [
+          {
+            tagName: 'rect',
+            selector: 'body',
+          },
+          {
+            tagName: 'rect',
+            selector: 'name-rect',
+          },
+          {
+            tagName: 'text',
+            selector: 'name-text',
+          },
+          {
+            tagName: 'image',
+            selector: 'image',
+          },
+          {
+            tagName: 'rect',
+            selector: 'button',
+          },
+          {
+            tagName: 'rect',
+            selector: 'tagbutton',
+          },
+        ],
         width: 100,
         height: 60,
         attrs: {
@@ -63,6 +129,163 @@
           text: {
             fontSize: 12,
             fill: '#262626',
+          },
+          image: {
+            width: 16,
+            height: 16,
+            x: 2,
+            y: 2,
+            xlinkHref:
+              'https://cdn-icons-png.flaticon.com/512/7267/7267592.png',
+            opacity: 0.4,
+          },
+          tagbutton: {
+            x:2,
+            y:43,
+            width: 40,
+            height: 15,
+            rx: 6,
+            ry: 6,
+            'stroke-width': 0.5,
+            cursor: 'pointer',
+            fill: 'red',
+            stroke: '#fe854f',
+          },
+        },
+      },
+      true
+    );
+
+    X6.Graph.registerNode(
+      'streaming',
+      {
+        inherit: 'rect',
+        markup: [
+          {
+            tagName: 'rect',
+            selector: 'body',
+          },
+          {
+            tagName: 'rect',
+            selector: 'name-rect',
+          },
+          {
+            tagName: 'text',
+            selector: 'name-text',
+          },
+          {
+            tagName: 'image',
+            selector: 'image',
+          },
+          {
+            tagName: 'rect',
+            selector: 'button',
+          },
+          {
+            tagName: 'rect',
+            selector: 'tagbutton',
+          },
+        ],
+        width: 100,
+        height: 60,
+        attrs: {
+          body: {
+            strokeWidth: 1,
+            stroke: '#0040ff',
+            fill: '#EFF4FF',
+          },
+          text: {
+            fontSize: 12,
+            fill: '#262626',
+          },
+          image: {
+            width: 16,
+            height: 16,
+            x: 2,
+            y: 2,
+            xlinkHref:
+              'https://cdn-icons-png.flaticon.com/512/7267/7267592.png',
+            opacity: 0.4,
+          },
+          tagbutton: {
+            x:2,
+            y:43,
+            width: 40,
+            height: 15,
+            rx: 6,
+            ry: 6,
+            'stroke-width': 0.5,
+            cursor: 'pointer',
+            fill: 'blue',
+            stroke: '#fe854f',
+          },
+        },
+      },
+      true
+    );
+    
+    X6.Graph.registerNode(
+      'pipeline',
+      {
+        inherit: 'rect',
+        markup: [
+          {
+            tagName: 'rect',
+            selector: 'body',
+          },
+          {
+            tagName: 'rect',
+            selector: 'name-rect',
+          },
+          {
+            tagName: 'text',
+            selector: 'name-text',
+          },
+          {
+            tagName: 'image',
+            selector: 'image',
+          },
+          {
+            tagName: 'rect',
+            selector: 'button',
+          },
+          {
+            tagName: 'rect',
+            selector: 'tagbutton',
+          },
+        ],
+        width: 100,
+        height: 60,
+        attrs: {
+          body: {
+            strokeWidth: 1,
+            stroke: '#0040ff',
+            fill: '#EFF4FF',
+          },
+          text: {
+            fontSize: 12,
+            fill: '#262626',
+          },
+          image: {
+            width: 16,
+            height: 16,
+            x: 2,
+            y: 2,
+            xlinkHref:
+              'https://cdn-icons-png.flaticon.com/512/7267/7267592.png',
+            opacity: 0.4,
+          },
+          tagbutton: {
+            x:2,
+            y:43,
+            width: 40,
+            height: 15,
+            rx: 6,
+            ry: 6,
+            'stroke-width': 0.5,
+            cursor: 'pointer',
+            fill: 'green',
+            stroke: '#fe854f',
           },
         },
       },
@@ -73,6 +296,24 @@
       'outer_data',
       {
         inherit: 'rect',
+        markup: [
+          {
+            tagName: 'rect',
+            selector: 'body',
+          },
+          {
+            tagName: 'rect',
+            selector: 'name-rect',
+          },
+          {
+            tagName: 'text',
+            selector: 'name-text',
+          },
+          {
+            tagName: 'image',
+            selector: 'image',
+          },
+        ],
         width: 100,
         height: 60,
         attrs: {
@@ -81,11 +322,20 @@
             stroke: '#ff8000',
             fill: '#ffff00',
             rx: 20,
-            ry: 20
+            ry: 20,
           },
           text: {
             fontSize: 12,
             fill: '#262626',
+          },
+          image: {
+            width: 16,
+            height: 16,
+            x: 6,
+            y: 2,
+            xlinkHref:
+              'https://cdn-icons-png.flaticon.com/512/3602/3602109.png',
+            opacity: 0.4,
           },
         },
       },
@@ -96,6 +346,24 @@
       'inner_data',
       {
         inherit: 'rect',
+        markup: [
+          {
+            tagName: 'rect',
+            selector: 'body',
+          },
+          {
+            tagName: 'rect',
+            selector: 'name-rect',
+          },
+          {
+            tagName: 'text',
+            selector: 'name-text',
+          },
+          {
+            tagName: 'image',
+            selector: 'image',
+          },
+        ],
         width: 100,
         height: 60,
         attrs: {
@@ -104,17 +372,25 @@
             stroke: '#0040ff',
             fill: '#EFF4FF',
             rx: 20,
-            ry: 20
+            ry: 20,
           },
           text: {
             fontSize: 12,
             fill: '#262626',
           },
+          image: {
+            width: 16,
+            height: 16,
+            x: 6,
+            y: 2,
+            xlinkHref:
+              'https://cdn-icons-png.flaticon.com/512/3602/3602109.png',
+            opacity: 0.4,
+          },
         },
       },
       true
     );
-
 
     X6.Graph.registerEdge(
       'lane-edge',
@@ -122,7 +398,7 @@
         inherit: 'edge',
         connector: {
           name: 'rounded',
-          args: { radius: '50' }
+          args: { radius: '50' },
         },
         attrs: {
           line: {
@@ -195,4 +471,5 @@
   <body>
     <div id="container"></div>
   </body>
+  
 </html>
