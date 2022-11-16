@@ -147,8 +147,6 @@
     "shape": "outer_process",
     "x": 140,
     "y": 60,
-    "width": 100,
-    "height": 60,
     "label": "Upload\nfrom Firebase",
     "parent": "behavior"
   },
@@ -158,8 +156,6 @@
     "shape": "outer_data",
     "x": 300,
     "y": 60,
-    "width": 100,
-    "height": 60,
     "label": "Firebase\nbehavior\ndata",
     "parent": "behavior"
   },
@@ -177,11 +173,9 @@
 
   {
     "id": "ga4_behavior_process",
-    "shape": "inner_process",
+    "shape": "streaming",
     "x": 140,
     "y": 160,
-    "width": 100,
-    "height": 60,
     "label": "Upload\nfrom GA4",
     "parent": "behavior"
   },
@@ -191,8 +185,6 @@
     "shape": "inner_data",
     "x": 300,
     "y": 160,
-    "width": 100,
-    "height": 60,
     "label": "GA4\nbehavior\ndata",
     "parent": "behavior"
   },
@@ -210,11 +202,9 @@
 
   {
     "id": "criteo_cost_process",
-    "shape": "inner_process",
+    "shape": "pipeline",
     "x": 140,
     "y": 360,
-    "width": 100,
-    "height": 60,
     "label": "Upload\nfrom Criteo",
     "parent": "cost"
   },
@@ -224,8 +214,6 @@
     "shape": "inner_data",
     "x": 300,
     "y": 360,
-    "width": 100,
-    "height": 60,
     "label": "Criteo cost",
     "parent": "cost"
   },
@@ -254,11 +242,9 @@
 
   {
     "id": "facebook_cost_process",
-    "shape": "inner_process",
+    "shape": "pipeline",
     "x": 140,
     "y": 510,
-    "width": 100,
-    "height": 60,
     "label": "Upload\nfrom Facebook",
     "parent": "cost"
   },
@@ -268,8 +254,6 @@
     "shape": "inner_data",
     "x": 300,
     "y": 510,
-    "width": 100,
-    "height": 60,
     "label": "Facebook\ncost data",
     "parent": "cost"
   },
@@ -287,11 +271,9 @@
 
   {
     "id": "gad_cost_process",
-    "shape": "inner_process",
+    "shape": "pipeline",
     "x": 140,
     "y": 660,
-    "width": 100,
-    "height": 60,
     "label": "Upload\nfrom\nGoogleAd",
     "parent": "cost"
   },
@@ -301,8 +283,6 @@
     "shape": "inner_data",
     "x": 300,
     "y": 660,
-    "width": 100,
-    "height": 60,
     "label": "GoogleAd\ncost data",
     "parent": "cost"
   },
@@ -323,8 +303,6 @@
     "shape": "outer_process",
     "x": 140,
     "y": 760,
-    "width": 100,
-    "height": 60,
     "label": "Upload\nRTB-House",
     "parent": "cost"
   },
@@ -334,8 +312,6 @@
     "shape": "outer_data",
     "x": 300,
     "y": 760,
-    "width": 100,
-    "height": 60,
     "label": "RTB-House\ncost data",
     "parent": "cost"
   },
@@ -345,8 +321,6 @@
     "shape": "outer_data",
     "x": 300,
     "y": 860,
-    "width": 100,
-    "height": 60,
     "label": "Channel rules",
     "parent": "cost"
   },
@@ -367,8 +341,6 @@
     "shape": "outer_process",
     "x": 140,
     "y": 1040,
-    "width": 100,
-    "height": 60,
     "label": "Upload\nfrom CRM",
     "parent": "sale"
   },
@@ -378,8 +350,6 @@
     "shape": "outer_data",
     "x": 300,
     "y": 1040,
-    "width": 100,
-    "height": 60,
     "label": "Sale\ndata",
     "parent": "sale"
   },
@@ -389,8 +359,6 @@
     "shape": "inner_process",
     "x": 480,
     "y": 60,
-    "width": 100,
-    "height": 60,
     "label": "Hybrid sssions",
     "parent": "transformation"
   },
@@ -400,8 +368,6 @@
     "shape": "inner_data",
     "x": 640,
     "y": 60,
-    "width": 100,
-    "height": 60,
     "label": "Hybrid\nsession\ndata",
     "parent": "transformation"
   },
@@ -411,8 +377,6 @@
     "shape": "inner_process",
     "x": 480,
     "y": 160,
-    "width": 100,
-    "height": 60,
     "label": "Sessions",
     "parent": "transformation"
   },
@@ -422,8 +386,6 @@
     "shape": "inner_data",
     "x": 640,
     "y": 160,
-    "width": 100,
-    "height": 60,
     "label": "Session\ndata",
     "parent": "transformation"
   },
@@ -433,8 +395,6 @@
     "shape": "inner_process",
     "x": 480,
     "y": 510,
-    "width": 100,
-    "height": 60,
     "label": "Blend AdSpend",
     "parent": "transformation"
   },
@@ -444,8 +404,6 @@
     "shape": "inner_data",
     "x": 640,
     "y": 510,
-    "width": 100,
-    "height": 60,
     "label": "Blended AdSpent\ndata",
     "parent": "transformation"
   },
@@ -455,8 +413,6 @@
     "shape": "inner_process",
     "x": 800,
     "y": 360,
-    "width": 100,
-    "height": 60,
     "label": "Cost attribution",
     "parent": "transformation"
   },
@@ -466,8 +422,6 @@
     "shape": "inner_data",
     "x": 960,
     "y": 360,
-    "width": 100,
-    "height": 60,
     "label": "Sessions\nwith cost",
     "parent": "transformation"
   },
@@ -477,8 +431,6 @@
     "shape": "inner_process",
     "x": 960,
     "y": 480,
-    "width": 100,
-    "height": 60,
     "label": "Add channels",
     "parent": "transformation"
   },
@@ -488,8 +440,6 @@
     "shape": "inner_data",
     "x": 1120,
     "y": 480,
-    "width": 100,
-    "height": 60,
     "label": "Sessions\nwith channels",
     "parent": "transformation"
   },
@@ -499,8 +449,6 @@
     "shape": "inner_process",
     "x": 1120,
     "y": 600,
-    "width": 100,
-    "height": 60,
     "label": "Add sale",
     "parent": "transformation"
   },
@@ -510,8 +458,6 @@
     "shape": "inner_data",
     "x": 1280,
     "y": 600,
-    "width": 100,
-    "height": 60,
     "label": "Sessions\nwith sale",
     "parent": "transformation"
   },
@@ -521,8 +467,6 @@
     "shape": "inner_process",
     "x": 1280,
     "y": 720,
-    "width": 100,
-    "height": 60,
     "label": "Funnel based\nattribution",
     "parent": "transformation"
   },
@@ -532,8 +476,6 @@
     "shape": "inner_data",
     "x": 1440,
     "y": 720,
-    "width": 100,
-    "height": 60,
     "label": "Funnel based\nattribution data",
     "parent": "transformation"
   },
@@ -543,8 +485,6 @@
     "shape": "inner_process",
     "x": 1440,
     "y": 600,
-    "width": 100,
-    "height": 60,
     "label": "Prepare\ndatamarts",
     "parent": "transformation"
   },
