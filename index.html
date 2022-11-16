@@ -48,6 +48,10 @@
             tagName: 'rect',
             selector: 'tagbutton',
           },
+          {
+            tagName: 'rect',
+            selector: 'openbutton',
+          },
         ],
         width: 100,
         height: 60,
@@ -55,7 +59,8 @@
           body: {
             strokeWidth: 1,
             stroke: '#ff8000',
-            fill: '#ffff00',
+            fill: '#FFD700',
+            opacity: 0.8
           },
           text: {
             fontSize: 12,
@@ -71,8 +76,8 @@
             opacity: 0.4,
           },
           tagbutton: {
-            x:2,
-            y:43,
+            x: 2,
+            y: 43,
             width: 40,
             height: 15,
             rx: 6,
@@ -82,7 +87,18 @@
             fill: 'white',
             stroke: '#fe854f',
           },
-          
+          openbutton: {
+            x: 83,
+            y: 43,
+            width: 15,
+            height: 15,
+            rx: 6,
+            ry: 6,
+            'stroke-width': 0.5,
+            cursor: 'pointer',
+            fill: 'lightgrey',
+            stroke: 'grey',
+          },
         },
       },
       true
@@ -117,6 +133,10 @@
             tagName: 'rect',
             selector: 'tagbutton',
           },
+          {
+            tagName: 'rect',
+            selector: 'openbutton',
+          },
         ],
         width: 100,
         height: 60,
@@ -124,7 +144,8 @@
           body: {
             strokeWidth: 1,
             stroke: '#0040ff',
-            fill: '#EFF4FF',
+            fill: '#00008B',
+            opacity: 0.4
           },
           text: {
             fontSize: 12,
@@ -140,8 +161,8 @@
             opacity: 0.4,
           },
           tagbutton: {
-            x:2,
-            y:43,
+            x: 2,
+            y: 43,
             width: 40,
             height: 15,
             rx: 6,
@@ -150,6 +171,18 @@
             cursor: 'pointer',
             fill: 'red',
             stroke: '#fe854f',
+          },
+          openbutton: {
+            x: 83,
+            y: 43,
+            width: 15,
+            height: 15,
+            rx: 6,
+            ry: 6,
+            'stroke-width': 0.5,
+            cursor: 'pointer',
+            fill: 'lightgrey',
+            stroke: 'grey',
           },
         },
       },
@@ -185,6 +218,10 @@
             tagName: 'rect',
             selector: 'tagbutton',
           },
+          {
+            tagName: 'rect',
+            selector: 'openbutton',
+          },
         ],
         width: 100,
         height: 60,
@@ -208,8 +245,8 @@
             opacity: 0.4,
           },
           tagbutton: {
-            x:2,
-            y:43,
+            x: 2,
+            y: 43,
             width: 40,
             height: 15,
             rx: 6,
@@ -219,11 +256,23 @@
             fill: 'blue',
             stroke: '#fe854f',
           },
+          openbutton: {
+            x: 83,
+            y: 43,
+            width: 15,
+            height: 15,
+            rx: 6,
+            ry: 6,
+            'stroke-width': 0.5,
+            cursor: 'pointer',
+            fill: 'lightgrey',
+            stroke: 'grey',
+          },
         },
       },
       true
     );
-    
+
     X6.Graph.registerNode(
       'pipeline',
       {
@@ -253,6 +302,10 @@
             tagName: 'rect',
             selector: 'tagbutton',
           },
+          {
+            tagName: 'rect',
+            selector: 'openbutton',
+          },
         ],
         width: 100,
         height: 60,
@@ -276,8 +329,8 @@
             opacity: 0.4,
           },
           tagbutton: {
-            x:2,
-            y:43,
+            x: 2,
+            y: 43,
             width: 40,
             height: 15,
             rx: 6,
@@ -286,6 +339,18 @@
             cursor: 'pointer',
             fill: 'green',
             stroke: '#fe854f',
+          },
+          openbutton: {
+            x: 83,
+            y: 43,
+            width: 15,
+            height: 15,
+            rx: 6,
+            ry: 6,
+            'stroke-width': 0.5,
+            cursor: 'pointer',
+            fill: 'lightgrey',
+            stroke: 'grey',
           },
         },
       },
@@ -320,9 +385,10 @@
           body: {
             strokeWidth: 1,
             stroke: '#ff8000',
-            fill: '#ffff00',
             rx: 20,
             ry: 20,
+            fill: '#FFD700',
+            opacity: 0.4
           },
           text: {
             fontSize: 12,
@@ -370,9 +436,10 @@
           body: {
             strokeWidth: 1,
             stroke: '#0040ff',
-            fill: '#EFF4FF',
             rx: 20,
             ry: 20,
+            fill: '#00008B',
+            opacity: 0.2
           },
           text: {
             fontSize: 12,
@@ -392,13 +459,67 @@
       true
     );
 
+    X6.Graph.registerNode(
+      'datamart_data',
+      {
+        inherit: 'rect',
+        markup: [
+          {
+            tagName: 'rect',
+            selector: 'body',
+          },
+          {
+            tagName: 'rect',
+            selector: 'name-rect',
+          },
+          {
+            tagName: 'text',
+            selector: 'name-text',
+          },
+          {
+            tagName: 'image',
+            selector: 'image',
+          },
+        ],
+        width: 100,
+        height: 60,
+        attrs: {
+          body: {
+            strokeWidth: 1,
+            stroke: '#006400',
+            fill: '#80ff00',
+            rx: 20,
+            ry: 20,
+            opacity: 0.4,
+          },
+          text: {
+            fontSize: 12,
+            fill: '#262626',
+          },
+          image: {
+            width: 16,
+            height: 16,
+            x: 6,
+            y: 2,
+            xlinkHref:
+              'https://cdn-icons-png.flaticon.com/512/3602/3602109.png',
+            opacity: 0.4,
+          },
+        },
+      },
+      true
+    );
+
+   
+
     X6.Graph.registerEdge(
       'lane-edge',
       {
         inherit: 'edge',
         connector: {
           name: 'rounded',
-          args: { radius: '50' },
+          args: { 
+            radius: 100 },
         },
         attrs: {
           line: {
@@ -467,9 +588,10 @@
         },
       });
     });
+
+  
   </script>
   <body>
     <div id="container"></div>
   </body>
-  
 </html>
