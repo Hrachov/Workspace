@@ -132,6 +132,72 @@
   },
 
   {
+    "id": "datamart",
+    "shape": "area",
+    "width": 200,
+    "height": 1170,
+    "position": {
+      "x": 1580,
+      "y": 10
+    },
+    "label": "Data mart",
+    "attrs": {
+      "body": {
+        "fill": "#FFF",
+        "stroke": "#5F95FF",
+        "strokeWidth": "0.5"
+      },
+      "name-rect": {
+        "width": "198",
+        "height": "30",
+        "strokeWidth": "0",
+        "x": "+1",
+        "y": "+1"
+      },
+      "name-text": {
+        "ref": "name-rect",
+        "refY": "0.5",
+        "refX": "0.5",
+        "textAnchor": "middle",
+        "fontSize": "12"
+      }
+    }
+  },
+
+  {
+    "id": "report",
+    "shape": "area",
+    "width": 200,
+    "height": 1170,
+    "position": {
+      "x": 1780,
+      "y": 10
+    },
+    "label": "Report",
+    "attrs": {
+      "body": {
+        "fill": "#FFF",
+        "stroke": "#5F95FF",
+        "strokeWidth": "0.5"
+      },
+      "name-rect": {
+        "width": "198",
+        "height": "30",
+        "strokeWidth": "0",
+        "x": "+1",
+        "y": "+1"
+      },
+      "name-text": {
+        "ref": "name-rect",
+        "refY": "0.5",
+        "refX": "0.5",
+        "textAnchor": "middle",
+        "fontSize": "12"
+      }
+    }
+  },
+
+  {
     "id": "firebase_behavior_source",
     "shape": "image",
     "x": 30,
@@ -490,6 +556,73 @@
   },
 
   {
+    "id": "1_datamart_data",
+    "shape": "datamart_data",
+    "x": 1630,
+    "y": 400,
+    "label": "Data mart 1",
+    "parent": "datamart"
+  },
+
+  {
+    "id": "2_datamart_data",
+    "shape": "datamart_data",
+    "x": 1630,
+    "y": 500,
+    "label": "Data mart 2",
+    "parent": "datamart"
+  },
+
+  {
+    "id": "3_datamart_data",
+    "shape": "datamart_data",
+    "x": 1630,
+    "y": 600,
+    "label": "Data mart 3",
+    "parent": "datamart"
+  },
+
+  {
+    "id": "4_datamart_data",
+    "shape": "datamart_data",
+    "x": 1630,
+    "y": 700,
+    "label": "Data mart 4",
+    "parent": "datamart"
+  },
+
+  {
+    "id": "5_datamart_data",
+    "shape": "datamart_data",
+    "x": 1630,
+    "y": 800,
+    "label": "Data mart 5",
+    "parent": "datamart"
+  },
+
+  {
+    "id": "1_report_report",
+    "shape": "image",
+    "x": 1830,
+    "y": 500,
+    "width": 60,
+    "height": 60,
+    "imageUrl": "https://www.svgrepo.com/show/354012/looker-icon.svg",
+    "parent": "report"
+  },
+
+  {
+    "id": "2_report_report",
+    "shape": "image",
+    "x": 1830,
+    "y": 700,
+    "width": 60,
+    "height": 60,
+    "imageUrl": "https://www.svgrepo.com/show/354012/looker-icon.svg",
+    "parent": "report"
+  },
+
+  {
     "id": "edge1",
     "shape": "lane-edge",
     "source": "firebase_behavior_source",
@@ -746,5 +879,159 @@
     "shape": "lane-edge",
     "source": "fba_transformation_data",
     "target": "preparedatamart_transformation_process"
+  },
+
+  {
+    "id": "edge38",
+    "shape": "lane-edge",
+    "source": "preparedatamart_transformation_process",
+    "target": "1_datamart_data",
+    "router": {
+      "name": "manhattan",
+      "args": {
+        "startDirections": ["right"],
+        "endDirections": ["left"]
+      }
+    }
+  },
+
+  {
+    "id": "edge39",
+    "shape": "lane-edge",
+    "source": "preparedatamart_transformation_process",
+    "target": "2_datamart_data",
+    "router": {
+      "name": "manhattan",
+      "args": {
+        "startDirections": ["right"],
+        "endDirections": ["left"]
+      }
+    }
+  },
+
+  {
+    "id": "edge40",
+    "shape": "lane-edge",
+    "source": "preparedatamart_transformation_process",
+    "target": "3_datamart_data",
+    "router": {
+      "name": "manhattan",
+      "args": {
+        "startDirections": ["right"],
+        "endDirections": ["left"]
+      }
+    }
+  },
+
+  {
+    "id": "edge41",
+    "shape": "lane-edge",
+    "source": "preparedatamart_transformation_process",
+    "target": "4_datamart_data",
+    "router": {
+      "name": "manhattan",
+      "args": {
+        "startDirections": ["right"],
+        "endDirections": ["left"]
+      }
+    }
+  },
+
+  {
+    "id": "edge42",
+    "shape": "lane-edge",
+    "source": "preparedatamart_transformation_process",
+    "target": "5_datamart_data",
+    "router": {
+      "name": "manhattan",
+      "args": {
+        "startDirections": ["right"],
+        "endDirections": ["left"]
+      }
+    }
+  },
+
+  {
+    "id": "edge43",
+    "shape": "lane-edge",
+    "source": "1_datamart_data",
+    "target": "1_report_report",
+    "router": {
+      "name": "manhattan",
+      "args": {
+        "startDirections": ["right"],
+        "endDirections": ["left"]
+      }
+    }
+  },
+
+  {
+    "id": "edge44",
+    "shape": "lane-edge",
+    "source": "2_datamart_data",
+    "target": "1_report_report",
+    "router": {
+      "name": "manhattan",
+      "args": {
+        "startDirections": ["right"],
+        "endDirections": ["left"]
+      }
+    }
+  },
+
+  {
+    "id": "edge45",
+    "shape": "lane-edge",
+    "source": "3_datamart_data",
+    "target": "1_report_report",
+    "router": {
+      "name": "manhattan",
+      "args": {
+        "startDirections": ["right"],
+        "endDirections": ["left"]
+      }
+    }
+  },
+
+  {
+    "id": "edge46",
+    "shape": "lane-edge",
+    "source": "3_datamart_data",
+    "target": "2_report_report",
+    "router": {
+      "name": "manhattan",
+      "args": {
+        "startDirections": ["right"],
+        "endDirections": ["left"]
+      }
+    }
+  },
+
+  {
+    "id": "edge47",
+    "shape": "lane-edge",
+    "source": "4_datamart_data",
+    "target": "2_report_report",
+    "router": {
+      "name": "manhattan",
+      "args": {
+        "startDirections": ["right"],
+        "endDirections": ["left"]
+      }
+    }
+  },
+
+  {
+    "id": "edge48",
+    "shape": "lane-edge",
+    "source": "5_datamart_data",
+    "target": "2_report_report",
+    "router": {
+      "name": "manhattan",
+      "args": {
+        "startDirections": ["right"],
+        "endDirections": ["left"]
+      }
+    }
   }
 ]
